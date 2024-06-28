@@ -47,7 +47,7 @@ const AppointmentForm = () => {
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
-        "https://hospital-umber.vercel.app/api/v1/appointment/post",
+        "https://hospital-management-peach.vercel.app/api/v1/appointment/post",
         {
           firstName,
           lastName,
