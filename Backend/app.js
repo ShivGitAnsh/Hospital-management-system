@@ -13,7 +13,11 @@ const app = express();
 // config({ path: "./config/config.env" });
 
 app.use(
-  cors()
+  cors({
+    origin: ['https://hospital-management-system-3ddf.vercel.app/', 'https://hospital-management-dashboard-omega.vercel.app/'],
+    method: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
 );
 
 app.use(cookieParser());
