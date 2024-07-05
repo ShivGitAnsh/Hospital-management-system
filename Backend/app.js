@@ -12,21 +12,14 @@ import appointmentRouter from "./router/appointmentRouter.js";
 const app = express();
 config();
 
-const corsOptions={
-
+app.use(cors({
     origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
     method: ["GET", "POST", "DELETE", "PUT"],
     headers:["Content-Type"],
-    credentials: true,
-  
-    };
-app.use(cors(corsOptions));
-app.use((req, res, next) => {
-  console.log("CORS configuration applied", corsOptions);
-  next();
-});
+    credentials: true,})
+    );
 
-app.options('*', cors(corsOptions));
+app.options('*', cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
