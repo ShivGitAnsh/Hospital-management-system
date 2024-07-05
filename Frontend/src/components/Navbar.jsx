@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("https://hospital-management-peach.vercel.app/api/v1/user/patient/logout", {
+      .get("https://hospital-management-backend-kuml.onrender.com/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {
