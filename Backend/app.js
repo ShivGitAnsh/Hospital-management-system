@@ -14,7 +14,7 @@ const app = express();
 
 const corsOptions={
 
-    origin: ['https://hospital-management-system-3ddf.vercel.app/', 'https://hospital-management-dashboard-omega.vercel.app/'],
+    origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   
