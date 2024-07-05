@@ -16,6 +16,7 @@ const corsOptions={
 
     origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
     method: ["GET", "POST", "DELETE", "PUT"],
+    headers:["Content-Type"],
     credentials: true,
   
     };
