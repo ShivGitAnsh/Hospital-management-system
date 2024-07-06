@@ -12,6 +12,9 @@ import appointmentRouter from "./router/appointmentRouter.js";
 const app = express();
 config();
 
+console.log("FRONTEND_URL_ONE:", process.env.FRONTEND_URL_ONE);
+console.log("FRONTEND_URL_TWO:", process.env.FRONTEND_URL_TWO);
+
 app.use(cors({
     origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
     method: ["GET", "POST", "DELETE", "PUT"],
