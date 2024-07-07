@@ -34,7 +34,7 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
     dob,
     gender,
     password,
-    role: "Admin",
+    role: "Patient",
   });
   generateToken(user, "User Registered!", 200, res);
 });
