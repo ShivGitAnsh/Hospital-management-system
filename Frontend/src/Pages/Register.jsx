@@ -33,6 +33,7 @@ const Register = () => {
         .then((res) => {
           toast.success(res.data.message);
           setIsAuthenticated(true);
+          navigateTo("/");
           setFirstName("");
           setLastName("");
           setEmail("");
@@ -41,7 +42,7 @@ const Register = () => {
           setDob("");
           setGender("");
           setPassword("");
-          navigateTo("/");
+          
         });
     } catch (error) {
       toast.error(error.response.data.message);
