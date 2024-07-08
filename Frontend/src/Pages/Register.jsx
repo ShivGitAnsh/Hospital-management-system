@@ -32,8 +32,8 @@ const Register = () => {
         )
         .then((res) => {
           toast.success(res.data.message);
-          setIsAuthenticated(true);
           navigateTo("/");
+          setIsAuthenticated(true);
           setFirstName("");
           setLastName("");
           setEmail("");
