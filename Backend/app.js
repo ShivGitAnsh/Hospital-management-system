@@ -16,7 +16,7 @@ console.log("FRONTEND_URL_ONE:", process.env.FRONTEND_URL_ONE);
 console.log("FRONTEND_URL_TWO:", process.env.FRONTEND_URL_TWO);
 
 app.use(cors({
-    origin: ["https://hospital-management-system-3ddf.vercel.app",process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
+    origin: ["https://hospital-management-system-3ddf.vercel.app","https://hospital-management-dashboard-omega.vercel.app/login",process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,})
     );
