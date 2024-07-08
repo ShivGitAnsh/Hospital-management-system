@@ -10,23 +10,14 @@ export const Context = createContext({
 });
 
 const AppWrapper = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    const storedAuth = localStorage.getItem('isAuthenticated');
-    return storedAuth ? JSON.parse(storedAuth) : false;
-  });
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState({});
-
-  
-  const handleSetIsAuthenticated = (auth) => {
-    setIsAuthenticated(auth);
-    localStorage.setItem('isAuthenticated', JSON.stringify(auth));
-  };
 
   return (
     <Context.Provider
       value={{
         isAuthenticated,
-        setIsAuthenticated: handleSetIsAuthenticated,
+        setIsAuthenticated,
         user,
         setUser,
       }}
